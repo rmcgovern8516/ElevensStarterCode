@@ -35,61 +35,43 @@ public class Card {
      */
     public Card(String cardRank, String cardSuit, int cardPointValue) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
+        this.rank = cardRank;
+        this.suit = cardSuit;
+        this.pointValue = cardPointValue;
     }
 
 
-    /**
-     * Accesses this <code>Card's</code> suit.
-     * @return this <code>Card's</code> suit.
-     */
-    public String suit() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+    public String getSuit() {
+        return suit;
     }
 
-    /**
-     * Accesses this <code>Card's</code> rank.
-     * @return this <code>Card's</code> rank.
-     */
-    public String rank() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+    public String getRank() {
+        return rank;
     }
 
-    /**
-     * Accesses this <code>Card's</code> point value.
-     * @return this <code>Card's</code> point value.
-     */
-    public int pointValue() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+    public int getPointValue() {
+        return pointValue;
     }
 
-    /** Compare this card with the argument.
-     * @param otherCard the other card to compare to this
-     * @return true if the rank, suit, and point value of this card
-     *              are equal to those of the argument;
-     *         false otherwise.
-     */
-    public boolean matches(Card otherCard) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+    public void setSuit(String suit) {
+        this.suit = suit;
     }
 
-    /**
-     * Converts the rank, suit, and point value into a string in the format
-     *     "[Rank] of [Suit] (point value = [PointValue])".
-     * This provides a useful way of printing the contents
-     * of a <code>Deck</code> in an easily readable format or performing
-     * other similar functions.
-     *
-     * @return a <code>String</code> containing the rank, suit,
-     *         and point value of the card.
-     */
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
+    public void setPointValue(int pointValue) {
+        this.pointValue = pointValue;
+    }
+
     @Override
     public String toString() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
-
+        return "Card{" +
+                "suit='" + suit + '\'' +
+                ", rank='" + rank + '\'' +
+                ", pointValue=" + pointValue +
+                '}';
     }
 }
 
